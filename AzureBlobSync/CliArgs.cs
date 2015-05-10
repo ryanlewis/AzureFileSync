@@ -14,6 +14,7 @@ namespace AzureBlobSync
         [ArgDefaultValue(".")]
         public string Dir { get; set; }
 
+        [ArgHiddenFromUsage]
         public bool DevMode { get; set; }
 
         public bool Verbose { get; set; }
