@@ -31,9 +31,9 @@ namespace AzureBlobSync
             var container = blobClient.GetContainerReference(args.Container);
             container.CreateIfNotExists();
 
-            if (args.Directory == ".") args.Directory = Directory.GetCurrentDirectory();
+            if (args.Dir == ".") args.Dir = Directory.GetCurrentDirectory();
 
-            var files = Directory.GetFiles(args.Directory);
+            var files = Directory.GetFiles(args.Dir);
 
             foreach (var file in files)
             {
