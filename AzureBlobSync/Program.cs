@@ -37,7 +37,11 @@ namespace AzureBlobSync
 
                 var blob = container.GetBlockBlobReference(fileName);
 
-                if (blob.Exists())
+                if (args.DeleteIfExists)
+                {
+                    blob.DeleteIfExists();
+                }
+                else if (blob.Exists())
                 {
                     if (args.Verbose) Console.WriteLine("Skipping {0} as already exists...", fileName);
                     continue;

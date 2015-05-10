@@ -18,5 +18,6 @@ namespace AzureBlobSync
         public bool DevMode { get; set; }
 
         public bool Verbose { get; set; }
+        public bool DeleteIfExists { get; set; }
     }
 }

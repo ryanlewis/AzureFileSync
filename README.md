@@ -10,3 +10,4 @@ Very simple utility to upload all files from a directory into blob storage. Does
 * `-Container <Container>` - Azure container name
 * `-Dir <Directory>` - Directory to sync
 * `-Verbose` - Print more output
+* `-DeleteIfExists` - Deletes the file from blob storage and re-uploads if the file already exists
