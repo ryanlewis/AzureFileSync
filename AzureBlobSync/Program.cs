@@ -1,17 +1,13 @@
 ﻿using System;
 using System.IO;
-using System.Security.Cryptography;
 using Microsoft.WindowsAzure.Storage;
-using Microsoft.WindowsAzure.Storage.Blob;
 using PowerArgs;
 
 namespace AzureBlobSync
 {
-    class Program
+    internal class Program
     {
-        private static readonly MD5 MD5 = MD5.Create();
-
-        static void Main(string[] argsStd)
+        private static void Main(string[] argsStd)
         {
             CliArgs args;
 
@@ -50,7 +46,6 @@ namespace AzureBlobSync
                 Console.WriteLine("Uploading {0}...", fileName);
                 blob.UploadFromFile(file, FileMode.Open);
             }
-
         }
     }
 }
