@@ -12,7 +12,7 @@ namespace AzureBlobSync
 
         [ArgRequired(PromptIfMissing = true)]
         [ArgDefaultValue(".")]
-        public string Directory { get; set; }
+        public string Dir { get; set; }
 
         public bool DevMode { get; set; }
 
